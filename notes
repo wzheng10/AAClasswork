@@ -1,10 +1,11 @@
 Git Workflow
 1. git init
 2. git remote add your_alias https://github.com/your_username/your_repo_name
-3. git add <files>
+3. git add <files>  i.e. git add notes.rb
 4 git commit -m "message"
 git push your_alias master/main
 
+Workspace --> Staging --> Local Repository --> Remote Repositroy 
 Commands
 git add . (current directory)
     1. adds everything that is new/has changed in the current directory
@@ -27,7 +28,12 @@ Local Repo Commands 1
     2 git status - see current chnages from last commit
     3 git log - see list of commits
     4.git diff - show what changed form last commit to staged changes
+    5.git clone <url> - creates a copy of the repository
 
+    6.git push --force
+        or -f force option, ** BE CAREFUL** 
+    7. git push --all
+        pushes all branches
 Local Reset Commands
 1. git reset <filename>
     -removes a file from staging area 
@@ -67,7 +73,7 @@ Branches
     git checkout master changes the branch
     git status - looks at files
 
-Fixing Git Commit AUthorship
+Fixing Git Commit Authorship
 1. Create a backup branch - that was if something goes wrong, you can always get back to your original state
     git branch wrong-author
 2. Run the command in terminal from within your repo's root directory
@@ -79,5 +85,5 @@ do i have to git init every time i change my class directory in order to  add/co
 upload to the same repository for files only or can i add folders?
 
 do we have to create a repo everytime?
-what if we add two remotes? 
+what if we add two remotes? W
 git status
