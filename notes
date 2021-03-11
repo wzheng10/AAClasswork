@@ -1,19 +1,71 @@
+Git Workflow
+1. git init
+2. git remote add your_alias https://github.com/your_username/your_repo_name
+3. git add <files>
+4 git commit -m "message"
+git push your_alias master/main
+
 Commands
 git add . (current directory)
     1. adds everything that is new/has changed in the current directory
     2. easy to ccidentally include changes that have nothing to do with current commit
+
 git add -u (update)
     1. updates already tracked files and removes them from staging area if they're not in the working directory.
     2. it does not track new files
+
 git add -A (all)
     1. finds new files as well as updating old files (git add . + git add -u)
     2 easy to accidentally include changes that have nothing to do with current commit
+
 git add <file>(*RECOMMENDED*)
     1. Adds, updates or deletes listed files
     2. Can be tedious for many files
 
+Local Repo Commands 1
+    1.git init - creates local Git repository
+    2 git status - see current chnages from last commit
+    3 git log - see list of commits
+    4.git diff - show what changed form last commit to staged changes
+
+Local Reset Commands
+1. git reset <filename>
+    -removes a file from staging area 
+    -does not affect working directory
+2. git reset
+    -unstage everything 
+    -does not affect working directory
+3. git reset --hard (**BECAREFUL WHEN USING**)
+    -reset the staging area and the working directory to match the most recent commits 9or specified commit)
+    - affects the working directory
+
 Alias-  a shell command that enables the replacement of a word with another string.
     use code ~/.bash_profile on git bash and it will open an alias
+
+Vocab
+1. untracked - any newly introduced files (not in previous snapshot of repo)
+2. unstaged - files that exit in .git but has been changed since last commits
+stagesd
+commit
+
+remote commands
+1. origin -keyword referring to defauly remote repo
+2. git remote 
+    - command to list remotes
+3. git remote add <remote> remote-url> 
+    - adds remote
+4. git push <remote> <branch-name> 
+    - moves updates from .git to remote repository
+5. git push -u <remote> <branch-name> 
+    - moves updates from .git to remote repository, sets upstream branch
+
+6. git clone <remote-url> - copies the remote repo to tyour local machine
+7. git fetch <remote> - gets updated info from the remote repo
+8. git pull <remote> <branch-name> - gets updates AND merges from remote repository
+
+Branches
+    git checkout master changes the branch
+    git status - looks at files
 
 Fixing Git Commit AUthorship
 1. Create a backup branch - that was if something goes wrong, you can always get back to your original state
@@ -21,7 +73,11 @@ Fixing Git Commit AUthorship
 2. Run the command in terminal from within your repo's root directory
 git filter-branch -f --env-filter "GIT_AUTHOR_NAME='your_full_name'; GIT_AUTHOR_EMAIL='your_email'; GIT_COMMITTER_NAME='your_full_name'; GIT_COMMITTER_EMAIL='your_email';" HEAD
 3. If you've already pushed your repo to GitHub , then add -f to git push to force push all your commites
+
 Questions to ask:
 do i have to git init every time i change my class directory in order to  add/commit and push?
-what is the remote upstream?
+upload to the same repository for files only or can i add folders?
 
+do we have to create a repo everytime?
+what if we add two remotes? 
+git status
