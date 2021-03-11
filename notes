@@ -14,3 +14,14 @@ git add <file>(*RECOMMENDED*)
 
 Alias-  a shell command that enables the replacement of a word with another string.
     use code ~/.bash_profile on git bash and it will open an alias
+
+Fixing Git Commit AUthorship
+1. Create a backup branch - that was if something goes wrong, you can always get back to your original state
+    git branch wrong-author
+2. Run the command in terminal from within your repo's root directory
+git filter-branch -f --env-filter "GIT_AUTHOR_NAME='your_full_name'; GIT_AUTHOR_EMAIL='your_email'; GIT_COMMITTER_NAME='your_full_name'; GIT_COMMITTER_EMAIL='your_email';" HEAD
+3. If you've already pushed your repo to GitHub , then add -f to git push to force push all your commites
+Questions to ask:
+do i have to git init every time i change my class directory in order to  add/commit and push?
+what is the remote upstream?
+
