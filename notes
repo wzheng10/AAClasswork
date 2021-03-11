@@ -69,9 +69,16 @@ remote commands
 7. git fetch <remote> - gets updated info from the remote repo
 8. git pull <remote> <branch-name> - gets updates AND merges from remote repository
 
-Branches
-    git checkout master changes the branch
-    git status - looks at files
+Branching vocab/commands
+1. encouraged to rename to main, expsically by github
+    -defaults to main branch
+2. git branch list branches
+3. git checkout <branch-name> - switch to branch
+4. git checkout -b <branch-name>- create and immediately switch to branch
+5. git branch -d <branch-name>-deltes branch
+6. git merge <branc-name>- merges <branch-name> into current branch
+7  git checkout master changes the branch
+8. git status - looks at files
 
 Fixing Git Commit Authorship
 1. Create a backup branch - that was if something goes wrong, you can always get back to your original state
