@@ -1,0 +1,16 @@
+Commands
+git add . (current directory)
+    1. adds everything that is new/has changed in the current directory
+    2. easy to ccidentally include changes that have nothing to do with current commit
+git add -u (update)
+    1. updates already tracked files and removes them from staging area if they're not in the working directory.
+    2. it does not track new files
+git add -A (all)
+    1. finds new files as well as updating old files (git add . + git add -u)
+    2 easy to accidentally include changes that have nothing to do with current commit
+git add <file>(*RECOMMENDED*)
+    1. Adds, updates or deletes listed files
+    2. Can be tedious for many files
+
+Alias-  a shell command that enables the replacement of a word with another string.
+    use code ~/.bash_profile on git bash and it will open an alias
